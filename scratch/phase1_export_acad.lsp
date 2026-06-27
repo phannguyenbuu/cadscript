@@ -1,0 +1,13 @@
+; Phase 1: Export current drawing to pure AutoCAD DWG (strips AEC objects)
+(defun c:export-to-acad ()
+  (vl-load-com)
+  (setvar "FILEDIA" 0)
+  (setvar "CMDECHO" 1)
+  (princ (strcat "\n--- EXPORTTOAUTOCAD: " (vl-filename-base (getvar "DWGNAME")) " ---"))
+  ; EXPORTTOAUTOCAD creates <name>_ACAD.dwg in same folder, no dialog prompts when FILEDIA=0
+  (command "_.EXPORTTOAUTOCAD")
+  (while (> (getvar "CMDACTIVE") 0) (command ""))
+  (princ "\n--- DONE ---")
+  (command "_.QUIT" "Y")
+)
+(c:export-to-acad)

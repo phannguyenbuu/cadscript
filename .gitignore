@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# Compressed archives
+*.zip
+
 # User-specific files
 *.rsuser
 *.suo
@@ -27,7 +30,17 @@ x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
-[Bb]in/
+![Bb]in/
+[Bb]in/*
+![Bb]in/2021/
+![Bb]in/assemblies/
+[Bb]in/assemblies/*
+![Bb]in/assemblies/*/
+![Bb]in/assemblies/*/*/
+![Bb]in/**/*.dll
+![Bb]in/**/*.exe
+![Bb]in/**/*.config
+![Bb]in/**/*.pdb
 [Oo]bj/
 [Oo]ut/
 [Ll]og/

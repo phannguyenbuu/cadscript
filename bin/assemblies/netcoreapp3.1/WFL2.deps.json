@@ -1,0 +1,183 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "WFL2/1.0.0": {
+        "dependencies": {
+          "accoremgd": "24.0.0.0",
+          "acmgd": "24.0.0.0"
+        },
+        "runtime": {
+          "WFL2.dll": {}
+        }
+      },
+      "accoremgd/24.0.0.0": {
+        "runtime": {
+          "accoremgd.dll": {
+            "assemblyVersion": "24.0.0.0",
+            "fileVersion": "24.0.47.0"
+          }
+        }
+      },
+      "acmgd/24.0.0.0": {
+        "runtime": {
+          "acmgd.dll": {
+            "assemblyVersion": "24.0.0.0",
+            "fileVersion": "24.0.47.0"
+          }
+        }
+      },
+      "Acdbmgd/24.0.0.0": {
+        "runtime": {
+          "Acdbmgd.dll": {
+            "assemblyVersion": "24.0.0.0",
+            "fileVersion": "24.0.47.0"
+          }
+        }
+      },
+      "AcDx/24.0.0.0": {
+        "runtime": {
+          "AcDx.dll": {
+            "assemblyVersion": "24.0.0.0",
+            "fileVersion": "24.0.47.0"
+          }
+        }
+      },
+      "AcDxPublishUi/24.0.0.0": {
+        "runtime": {
+          "AcDxPublishUi.dll": {
+            "assemblyVersion": "24.0.0.0",
+            "fileVersion": "24.0.47.0"
+          }
+        }
+      },
+      "AdWindows/3.0.2.0": {
+        "runtime": {
+          "AdWindows.dll": {
+            "assemblyVersion": "3.0.2.0",
+            "fileVersion": "3.0.2.0"
+          }
+        }
+      },
+      "AcMr/24.0.0.0": {
+        "runtime": {
+          "AcMr.dll": {
+            "assemblyVersion": "24.0.0.0",
+            "fileVersion": "24.0.47.0"
+          }
+        }
+      },
+      "AcWindows/24.0.0.0": {
+        "runtime": {
+          "AcWindows.dll": {
+            "assemblyVersion": "24.0.0.0",
+            "fileVersion": "24.0.47.0"
+          }
+        }
+      },
+      "AcTcMgd/24.0.0.0": {
+        "runtime": {
+          "AcTcMgd.dll": {
+            "assemblyVersion": "24.0.0.0",
+            "fileVersion": "24.0.47.0"
+          }
+        }
+      },
+      "AcCui/24.0.0.0": {
+        "runtime": {
+          "AcCui.dll": {
+            "assemblyVersion": "24.0.0.0",
+            "fileVersion": "24.0.47.0"
+          }
+        }
+      },
+      "Autodesk.AutoCAD.Interop.Common/24.0.0.0": {
+        "runtime": {
+          "Autodesk.AutoCAD.Interop.Common.dll": {
+            "assemblyVersion": "24.0.0.0",
+            "fileVersion": "24.0.47.0"
+          }
+        }
+      },
+      "AcMNUParser/24.0.0.0": {
+        "runtime": {
+          "AcMNUParser.dll": {
+            "assemblyVersion": "24.0.0.0",
+            "fileVersion": "24.0.47.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WFL2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "accoremgd/24.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "acmgd/24.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Acdbmgd/24.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AcDx/24.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AcDxPublishUi/24.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AdWindows/3.0.2.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AcMr/24.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AcWindows/24.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AcTcMgd/24.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AcCui/24.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Autodesk.AutoCAD.Interop.Common/24.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AcMNUParser/24.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

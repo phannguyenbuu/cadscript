@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\OpenCvSharp4.runtime.win.4.9.0.20240103\build\net48\OpenCvSharp4.runtime.win.props" Condition="Exists('packages\OpenCvSharp4.runtime.win.4.9.0.20240103\build\net48\OpenCvSharp4.runtime.win.props')" />
+  <Import Project="packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\build\Microsoft.CodeAnalysis.Analyzers.props" Condition="Exists('packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\build\Microsoft.CodeAnalysis.Analyzers.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5C7F93F-FB62-4614-839F-B072B3CCE310}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AcadScript</RootNamespace>
+    <AssemblyName>AcadScript5</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\..\..\..\..\Program Files\Autodesk\3ds Max 2013\bin\assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Public\Architect\gDrawArch.cs" />
+    <Compile Include="Public\Architect\gDrawBeam.cs" />
+    <Compile Include="Public\Architect\gDrawDim.cs" />
+    <Compile Include="Public\Architect\gDrawMap.cs" />
+    <Compile Include="Public\Architect\gDrawPlan.cs" />
+    <Compile Include="Public\Architect\gRegionCLS.cs" />
+    <Compile Include="Public\Architect\gTekla.cs" />
+    <Compile Include="Public\CadLib Plan\CSV Data.cs" />
+    <Compile Include="Public\CadLib Plan\gDraw2D.cs" />
+    <Compile Include="Public\CadLib Plan\gGraph.cs" />
+    <Compile Include="Public\CadLib Plan\gDraw3D.cs" />
+    <Compile Include="Public\CadLib Plan\gRoadList.cs" />
+    <Compile Include="Public\CadLib Plan\Read CSS Data.cs" />
+    <Compile Include="Public\CadLib Plan\WriteHTML.cs" />
+    <Compile Include="Public\GB.cs" />
+    <None Include="Sample\Dw\Init Hatch.cs" />
+    <Compile Include="Sample\Bk\Recognize Shapes.cs" />
+    <Compile Include="Sample\Bk\_Tekla Build Purlin.cs" />
+    <Compile Include="Sample\Dm\Dimension Cross.cs" />
+    <Compile Include="Sample\Dm\List Steel.cs" />
+    <Compile Include="Sample\Dw\CAX Draw Export.cs" />
+    <Compile Include="Sample\Dw\Create Circle BBox.cs" />
+    <Compile Include="Sample\Dw\PCCC.cs" />
+    <Compile Include="Structural EBeam.cs" />
+    <Compile Include="Sample\Dw\Wall Export.cs" />
+    <None Include="Sample\Dw\ZCadLib Struct.cs" />
+    <Compile Include="Sample\Ln\Polyline Fix Area.cs" />
+    <Compile Include="Sample\Oj\A Round Verts.cs" />
+    <Compile Include="Sample\Oj\Object All Contents.cs" />
+    <Compile Include="Sample\Dw\Drawing Circle.cs" />
+    <Compile Include="Sample\Ln\Connect ZigZag.cs" />
+    <Compile Include="Sample\Oj\Door Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\Ln\Polyline Extent.cs" />
+    <Compile Include="Struct Column Detail.cs" />
+    <None Include="app.config" />
+    <Compile Include="Public\HP.cs" />
+    <Compile Include="Cls\IAnno.cs" />
+    <Compile Include="Cls\ACD.cs" />
+    <Compile Include="Cls\Global.cs" />
+    <Compile Include="Sample\Ln\Hatch Erase Annotative In Region.cs" />
+    <Compile Include="Sample\Oj\Stretch.cs" />
+    <Compile Include="Cls\IBlock.cs" />
+    <Compile Include="Cls\IDimChain.cs" />
+    <Compile Include="Cls\IReader.cs" />
+    <Compile Include="Cls\IDraw.cs" />
+    <Compile Include="Cls\IS.cs" />
+    <Compile Include="Cls\IZone.cs" />
+    <Compile Include="Cls\MethodEntity.cs" />
+    <Compile Include="Extent\DE.cs" />
+    <Compile Include="Extent\pDES.cs" />
+    <Compile Include="Cls\BeamCLS.cs" />
+    <Compile Include="Cls\DataView.cs" />
+    <Compile Include="Cls\Extensions.cs" />
+    <Compile Include="Cls\ITable.cs" />
+    <Compile Include="Cls\Publisher.cs" />
+    <Compile Include="Cls\ArchCloud.cs" />
+    <Compile Include="Commands.cs" />
+    <Compile Include="Extent\DotNetCompilers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Extent\Config.cs" />
+    <Compile Include="AcadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcadForm.Designer.cs">
+      <DependentUpon>AcadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sample\Oj\Erase All XNote Objects.cs" />
+    <None Include="packages.config" />
+    <Compile Include="Sample\Dw\Draw 3D View.cs" />
+    <Compile Include="Sample\Bk\Pivot Center.cs" />
+    <Compile Include="Sample\Dm\Slab Arch Section.cs" />
+    <Compile Include="Sample\Oj\A Infors.cs" />
+    <Compile Include="Sample\Bk\_Tekla Bom Info.cs" />
+    <Compile Include="Sample\Oj\Object Stretch Symmetry.cs" />
+    <Compile Include="Sample\Pl\CurrentAnnoScale.cs" />
+    <Compile Include="Sample\Pl\AnnotativeAll.cs" />
+    <Compile Include="Sample\Dm\Slab Lower Steel.cs" />
+    <Compile Include="Sample\Dm\Slab Upper Steel.cs" />
+    <Compile Include="Sample\Struct\Beam Extract From Plan.cs" />
+    <Compile Include="Sample\Dm\Draw Slab.cs" />
+    <Compile Include="Sample\Struct\Show Column Text.cs" />
+    <Compile Include="Sample\Pl\Param Generate.cs" />
+    <Compile Include="Sample\Oj\Object Bounding.cs" />
+    <None Include="Sample\Dw\ZCadLib Plan.cs" />
+    <None Include="Sample\Pl\Plot Zoom Detail.cs" />
+    <Compile Include="Structural Steel Slab Break Low 1.cs" />
+    <Compile Include="Sample\Bk\Block Clear D Block.cs" />
+    <Compile Include="Sample\Bk\Block Show Name.cs" />
+    <Compile Include="Sample\Dm\Dimension Around.cs" />
+    <Compile Include="Sample\Dw\Drawing Replace All.cs" />
+    <Compile Include="Extent\pGraph.cs" />
+    <Compile Include="Extent\pPos.cs" />
+    <Compile Include="Extent\pString.cs" />
+    <Compile Include="Extent\Segment.cs" />
+    <Compile Include="Sample\Dw\Drawing Save To 2007.cs" />
+    <Compile Include="Sample\Oj\Object AEC Break Object.cs" />
+    <Compile Include="Sample\Dm\Dimension Group.cs" />
+    <Compile Include="Sample\Bk\Block Select Unnamed.cs" />
+    <Compile Include="Sample\Bk\Block Funiture Hidden.cs" />
+    <Compile Include="Sample\Bk\Block New From Ids.cs" />
+    <Compile Include="Sample\Dm\Dimension Ordinate.cs" />
+    <Compile Include="Sample\Bk\Block Grid Letter.cs" />
+    <Compile Include="Sample\Ln\Polyline Simply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\Ln\Polyline Text Length.cs" />
+    <Compile Include="Sample\Pl\Erase All Layouts.cs" />
+    <Compile Include="Sample\Bk\Block Counter.cs" />
+    <Compile Include="Sample\Pl\Table Block Schedule.cs" />
+    <Compile Include="Sample\Bk\Block List.cs" />
+    <Compile Include="Sample\Dw\ZCadLib Clipboard Preview.cs" />
+    <Compile Include="Sample\Pl\File INI Write.cs" />
+    <Compile Include="Sample\Pl\File Merge File List.cs" />
+    <Compile Include="Sample\Oj\Object Scale Reset.cs" />
+    <Compile Include="Sample\Ln\Polyline Weld.cs" />
+    <Compile Include="Sample\Pl\Table Door Schedule.cs" />
+    <Compile Include="Sample\Pl\Table Cell Go.cs" />
+    <Compile Include="Sample\Oj\Object Transfer Objects.cs" />
+    <Compile Include="Sample\Pl\Plot Viewport Extraction.cs" />
+    <Compile Include="Sample\Dw\ZCadLib Removal Remove.cs" />
+    <Compile Include="Sample\Oj\Planning Ceiling.cs" />
+    <Compile Include="Sample\Oj\Object Layer.cs" />
+    <Compile Include="Sample\Pl\Plot Load Viewport.cs" />
+    <Compile Include="Sample\Pl\Plot Info.cs" />
+    <Compile Include="Sample\Ln\Polyline Align Text.cs" />
+    <Compile Include="Sample\Bk\Layer Color Extraction.cs" />
+    <Compile Include="Structural Divide U Steel.cs" />
+    <Compile Include="Sample\Bk\Block Batch New.cs" />
+    <Compile Include="Structural Text.cs" />
+    <Compile Include="Sample\Bk\CeilTrunking.cs" />
+    <Compile Include="Sample\Bk\CeilSlab.cs" />
+    <None Include="Sample\Bk\CeilHook.cs" />
+    <Compile Include="Sample\Bk\Block Roll.cs" />
+    <Compile Include="Sample\Bk\Block Insert.cs" />
+    <None Include="Sample\Ln\Hatch Pattern.cs">
+      <SubType>Form</SubType>
+    </None>
+    <Compile Include="Structural Etabs Beam.cs" />
+    <Compile Include="Sample\Dw\ZCadLib Auto Complete.cs" />
+    <Compile Include="Sample\Oj\Object Infor Ids.cs" />
+    <Compile Include="Sample\Dw\Drawing Props Saving.cs" />
+    <Compile Include="Sample\Ln\Hatch Basepoint.cs" />
+    <Compile Include="Sample\Bk\Block Remove Line.cs" />
+    <Compile Include="Sample\Dm\Text All To Current Font.cs" />
+    <Compile Include="Sample\Dm\Text Annotative Removal.cs" />
+    <Compile Include="Sample\Dm\Text CSS Parser.cs" />
+    <Compile Include="Sample\Dm\Text Increase.cs" />
+    <Compile Include="Sample\Dm\Text Meter Square.cs" />
+    <Compile Include="Sample\Dm\Text Emove BBox.cs" />
+    <Compile Include="Sample\Dm\Text Merge.cs" />
+    <Compile Include="Sample\Dm\Text Add Prefix.cs" />
+    <Compile Include="Sample\Dm\Text Note Bounding.cs" />
+    <Compile Include="Sample\Dm\Text Note Tag Elements.cs" />
+    <Compile Include="Sample\Dm\Text Note Tool Strip.cs" />
+    <Compile Include="Sample\Dm\Text Note Tool.cs" />
+    <Compile Include="Sample\Dm\Text Reminder.cs" />
+    <Compile Include="Sample\Dm\Text Rotation.cs" />
+    <Compile Include="Sample\Dm\Text Standard.cs" />
+    <Compile Include="Sample\Dm\Text Style Purge.cs" />
+    <Compile Include="Sample\Dm\Text Unicode Convert.cs" />
+    <Compile Include="Sample\Dm\Text Upper.cs" />
+    <Compile Include="Sample\Oj\XNote Clone.cs" />
+    <Compile Include="Sample\Dw\Drawing Export.cs" />
+    <Compile Include="Sample\Oj\Wall Info.cs" />
+    <Compile Include="Structural Slab.cs" />
+    <Compile Include="Sample\Bk\Block Furniture.cs" />
+    <None Include="Sample\Dw\ZCadLib Import.cs" />
+    <Compile Include="Sample\Ln\Polyline Closed.cs" />
+    <None Include="Sample\Ln\Polyline Elevator.cs" />
+    <Compile Include="Sample\Ln\Polyline Road And Tree.cs" />
+    <Compile Include="Sample\Ln\Polyline Straighten.cs" />
+    <Compile Include="Sample\Ln\Polyline Line Type Letter.cs" />
+    <Compile Include="Sample\Dw\ZCadLib Result.cs" />
+    <Compile Include="Sample\Ln\Polyline Union.cs" />
+    <Compile Include="Sample\Ln\Polyline Regions.cs" />
+    <Compile Include="Sample\Dw\ZCadLib Snapshot.cs" />
+    <Compile Include="Sample\Ln\Polyline Width To Parrallel .cs" />
+    <Compile Include="Sample\Ln\Polyline To Wall.cs" />
+    <Compile Include="Sample\Dw\Drawing Stair.cs" />
+    <Compile Include="Sample\Dw\Drawing Mode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\Bk\Block And Text Alignment.cs" />
+    <Compile Include="Sample\Dm\Dimension A.cs" />
+    <Compile Include="Sample\Bk\Block Circle To Block.cs" />
+    <Compile Include="Sample\Pl\File Test.cs" />
+    <Compile Include="Sample\Ln\Polyline Area.cs" />
+    <Compile Include="Sample\Pl\Annotative 80.cs" />
+    <Compile Include="Sample\Pl\Annotative 50.cs" />
+    <Compile Include="Sample\Pl\Annotative 20.cs" />
+    <Compile Include="Sample\Pl\Annotative 100.cs" />
+    <Compile Include="Sample\Pl\Annotative 25.cs" />
+    <Compile Include="Sample\Pl\Annotative 10.cs" />
+    <Compile Include="Sample\Pl\Annotative 5.cs" />
+    <Compile Include="Sample\Pl\Annotative 200.cs" />
+    <Compile Include="Sample\Pl\Annotative 250.cs" />
+    <Compile Include="Sample\Pl\Annotative 400.cs" />
+    <Compile Include="Sample\Pl\Annotative 500.cs" />
+    <Compile Include="Sample\Pl\Annotative 1000.cs" />
+    <Compile Include="Sample\Bk\Block A.cs" />
+    <Compile Include="Sample\Bk\Block Mass Build.cs" />
+    <None Include="Sample\Ln\Hatch Tracing Basepoint.cs" />
+    <Compile Include="Sample\Oj\Object Label Rotation.cs" />
+    <Compile Include="Sample\Ln\Polyline Line Parallel.cs" />
+    <Compile Include="Sample\Oj\Object Purge Layer.cs" />
+    <Compile Include="Sample\Ln\Polyline Stair.cs" />
+    <Compile Include="Sample\Dw\Draw 3D Poly.cs" />
+    <Compile Include="Sample\Ln\Area Sum.cs" />
+    <Compile Include="Sample\Pl\Plot Zones Saving.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AcadForm.resx">
+      <DependentUpon>AcadForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\Dw\Drawing Mode.resx">
+      <DependentUpon>Drawing Mode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AcCoreMgd, Version=24.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\AutoCAD.NET.Core.24.1.51000\lib\net47\AcCoreMgd.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AcCui, Version=24.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\AutoCAD.NET.24.1.51000\lib\net47\AcCui.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AcDbMgd, Version=24.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\AutoCAD.NET.Model.24.1.51000\lib\net47\AcDbMgd.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="acdbmgdbrep, Version=24.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\AutoCAD.NET.Model.24.1.51000\lib\net47\acdbmgdbrep.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AcDx, Version=24.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\AutoCAD.NET.24.1.51000\lib\net47\AcDx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AcMgd, Version=24.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\AutoCAD.NET.24.1.51000\lib\net47\AcMgd.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AcMr, Version=24.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\AutoCAD.NET.24.1.51000\lib\net47\AcMr.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AcSeamless, Version=24.1.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>packages\AutoCAD.NET.24.1.51000\lib\net47\AcSeamless.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AcTcMgd, Version=24.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\AutoCAD.NET.24.1.51000\lib\net47\AcTcMgd.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AcWindows, Version=24.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\AutoCAD.NET.24.1.51000\lib\net47\AcWindows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AdUIMgd, Version=24.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\AutoCAD.NET.24.1.51000\lib\net47\AdUIMgd.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AdUiPalettes, Version=24.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\AutoCAD.NET.24.1.51000\lib\net47\AdUiPalettes.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AdWindows, Version=3.1.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\AutoCAD.NET.24.1.51000\lib\net47\AdWindows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AecArchDACHMgd, Version=7.7.49.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\2021\AecArchDACHMgd.dll</HintPath>
+    </Reference>
+    <Reference Include="AecArchMgd, Version=8.3.53.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\2021\AecArchMgd.dll</HintPath>
+    </Reference>
+    <Reference Include="AecBaseMgd, Version=8.3.53.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\2021\AecBaseMgd.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.AEC.Interop.ArchBase">
+      <HintPath>bin\2021\Autodesk.AEC.Interop.ArchBase.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Autodesk.AEC.Interop.Base">
+      <HintPath>bin\2021\Autodesk.AEC.Interop.Base.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Autodesk.AEC.Interop.Details">
+      <HintPath>bin\2021\Autodesk.AEC.Interop.Details.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Autodesk.AEC.Interop.Schedule">
+      <HintPath>bin\2021\Autodesk.AEC.Interop.Schedule.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Autodesk.AEC.Interop.UIArchBase">
+      <HintPath>bin\2021\Autodesk.AEC.Interop.UIArchBase.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Autodesk.AEC.Interop.UIBase">
+      <HintPath>bin\2021\Autodesk.AEC.Interop.UIBase.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Autodesk.AutoCAD.Interop.Common">
+      <HintPath>bin\2021\Autodesk.AutoCAD.Interop.Common.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Emgu.CV, Version=4.8.1.5350, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>packages\Emgu.CV.4.8.1.5350\lib\netstandard2.0\Emgu.CV.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis, Version=3.9.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.CodeAnalysis.Common.3.9.0\lib\netstandard2.0\Microsoft.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp, Version=3.9.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.CodeAnalysis.CSharp.3.9.0\lib\netstandard2.0\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.Scripting, Version=3.9.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.CodeAnalysis.CSharp.Scripting.3.9.0\lib\netstandard2.0\Microsoft.CodeAnalysis.CSharp.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.Scripting, Version=3.9.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.CodeAnalysis.Scripting.Common.3.9.0\lib\netstandard2.0\Microsoft.CodeAnalysis.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="OpenCvSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>packages\OpenCvSharp4.4.9.0.20240103\lib\net48\OpenCvSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\EPP.PresentationCore.1.0.0\lib\PresentationCore.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Collections.Immutable.5.0.0\lib\net461\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Drawing.Primitives.4.3.0\lib\net45\System.Drawing.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Metadata, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Reflection.Metadata.5.0.0\lib\net461\System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Text.Encoding.CodePages, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encoding.CodePages.4.5.1\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=7.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.7.0.3\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Photoshop">
+      <Guid>{E891EE9A-D0AE-4CB4-8871-F92C0109F18E}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\build\Microsoft.CodeAnalysis.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\build\Microsoft.CodeAnalysis.Analyzers.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\build\Microsoft.CodeAnalysis.Analyzers.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\build\Microsoft.CodeAnalysis.Analyzers.targets'))" />
+    <Error Condition="!Exists('packages\OpenCvSharp4.runtime.win.4.9.0.20240103\build\net48\OpenCvSharp4.runtime.win.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\OpenCvSharp4.runtime.win.4.9.0.20240103\build\net48\OpenCvSharp4.runtime.win.props'))" />
+  </Target>
+  <Import Project="packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\build\Microsoft.CodeAnalysis.Analyzers.targets" Condition="Exists('packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\build\Microsoft.CodeAnalysis.Analyzers.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
