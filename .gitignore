@@ -5,6 +5,7 @@
 
 # Compressed archives
 *.zip
+!deploy.zip
 
 # User-specific files
 *.rsuser
