@@ -375,3 +375,16 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Allow NewNetLoad binaries
+!NewNetLoad/NewNetLoad/bin/
+NewNetLoad/NewNetLoad/bin/*
+!NewNetLoad/NewNetLoad/bin/Debug/
+!NewNetLoad/NewNetLoad/bin/Release/
+!NewNetLoad/NewNetLoad/bin/Debug/*/
+!NewNetLoad/NewNetLoad/bin/Release/*/
+NewNetLoad/NewNetLoad/bin/Debug/*
+NewNetLoad/NewNetLoad/bin/Release/*
+!NewNetLoad/NewNetLoad/bin/**/*.dll
+!NewNetLoad/NewNetLoad/bin/**/*.exe
+!NewNetLoad/NewNetLoad/bin/**/*.config
